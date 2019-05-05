@@ -64,7 +64,7 @@ label-urgent-padding = 2
 
 [module/wlan]
 type = internal/network
-interface = net1
+interface = wlp3s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -84,7 +84,7 @@ ramp-signal-foreground = #272827
 
 [module/eth]
 type = internal/network
-interface = enp0s3
+interface = enp2s0
 interval = 3.0
 
 format-connected-padding = 2
