@@ -1,0 +1,38 @@
+alias cp="cp -i"                          # confirm before overwriting something
+alias df='df -h'                          # human-readable sizes
+alias free='free -m'                      # show sizes in MB
+alias np='nano -w PKGBUILD'
+alias more=less
+alias ebashrc="sudo emacs ~/.bashrc"
+alias lmgr="cd ~/dev/scala/learning-management/play-scala-seed/"
+alias clm="clm -l -no-pie"
+alias cleanfe="cd ~/dev/clean-ide/frontend"
+alias cleanbe="cd ~/dev/clean-ide/backend"
+alias deploycleanbe="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no gitlab_acc@178.62.77.9 \"./deploy.sh\""
+alias flux="xflux -l 47.4979 -g 19.0402 -k 3000"
+alias cleangitlab="ssh gitlab_acc@178.62.77.9"
+xhost +local:root > /dev/null 2>&1
+#alias clang++="/home/ia/build/bin/clang++"
+#alias clang="/home/ia/build/bin/clang"
+alias eals="~/my-linux-setup/eals"
+alias reload=". ~/.bashrc"
+alias please='fuck'
+# TODO get input (will need functions)
+# alias eals last=eals "$BASH" -c "$(history -p !!)"
+# source https://gist.github.com/igrigorik/6666860
+alias git_folders="python /home/marvin/dev/github-folders/github_folders.py"
+alias cg="clang++ -lGL -lGLU -lglut -lSDL2 -lGLEW"
+
+#alias gh="xdg-open `git remote -v | grep fetch | awk '{print $2}' | sed 's/git@/http:\/\//' | sed 's/com:/com\//'`| head -n1"
+#alias gh="xdg-open https://github.$(git config remote.origin.url | cut -f2 -d. | tr ':' /)"
+
+function gh() {
+	xdg-open `git remote -v | grep fetch | awk '{print $2}' | sed 's/git@/http:\/\//' | sed 's/com:/com\//'`| head -n1;
+}
+
+function cpdate() {
+	date '+%Y-%m-%d %H:%M:%S' | xclip -sel clip
+}
+alias thesis="cd ~/dev/liblibfuzz/"
+alias datef="date '+%Y-%m-%d %H:%M:%S'"
+alias datef="date '+%Y-%m-%d-%H-%M'"
