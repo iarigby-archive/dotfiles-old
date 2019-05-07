@@ -18,9 +18,10 @@
  '(linum-format " %6d ")
  '(main-line-color1 "#222232")
  '(main-line-color2 "#333343")
+ '(org-export-backends (quote (ascii html icalendar latex md)))
  '(package-selected-packages
    (quote
-    (centered-window google-this sx undo-tree company-mode move-text which-key openwith helm helm-mode-manager helm-make persp-projectile dashboard dired-filter workgroups2 all-the-icons ace-window dired-sidebar workgroups clang-format buffer-flip xterm-color smooth-scroll smooth-scrolling perspective sublime-themes frame-local projectile ov company-lsp lsp-ui cquery emacs-cquery org-ref expand-region ## ensime scala-mode eww-lnum kaolin-themes dracula-theme magit slime)))
+    (evil-mode centered-window google-this sx undo-tree company-mode move-text which-key openwith helm helm-mode-manager helm-make persp-projectile dashboard dired-filter workgroups2 all-the-icons ace-window dired-sidebar workgroups clang-format buffer-flip xterm-color smooth-scroll smooth-scrolling perspective sublime-themes frame-local projectile ov company-lsp lsp-ui cquery emacs-cquery org-ref expand-region ## ensime scala-mode eww-lnum kaolin-themes dracula-theme magit slime)))
  '(persp-mode t)
  '(powerline-color1 "#222232")
  '(powerline-color2 "#333343")
@@ -394,11 +395,9 @@ e.g. (display-buffer-in-side-window buffer '((side . left) (slot . -1)))"
 ;; (require 'i3-integration)
 ;; (i3-one-window-per-frame-mode-on)
 
-;;(set-default-font "-UKWN-Hermit-light-normal-*-*-*-*-*-m-0-iso10646-1 12" nil t)
+;;(set-default-font "-UKWN-Hermit-bold-normal-normal-*-*-*-*-*-m-0-iso10646-1 12" nil t)
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(org-export-backends (quote (ascii html icalendar latex md))))  
+  
+
+(use-package "evil")
+(evil-mode)
