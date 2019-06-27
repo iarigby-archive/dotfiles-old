@@ -7,10 +7,11 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#2d3743" "#ff4242" "#74af68" "#dbdb95" "#34cae2" "#008b8b" "#00ede1" "#e1e1e0"])
+ '(centered-window-mode t)
  '(custom-enabled-themes (quote (deeper-blue)))
  '(custom-safe-themes
    (quote
-    ("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "c48551a5fb7b9fc019bf3f61ebf14cf7c9cdca79bcb2a4219195371c02268f11" "72a81c54c97b9e5efcc3ea214382615649ebb539cb4f2fe3a46cd12af72c7607" "9b59e147dbbde5e638ea1cde5ec0a358d5f269d27bd2b893a0947c4a867e14c1" "5f27195e3f4b85ac50c1e2fac080f0dd6535440891c54fcfa62cdcefedf56b1b" "1ba61848d0d8c78e037867c26f118875705c20f5ad64949a8cee8c8059e5c50f" "5811d86b1d0907966fa2eb1d27a3c0e330c64f388740416f8e8c9079b81123e2" "2aa073a18b2ba860d24d2cd857bcce34d7107b6967099be646d9c95f53ef3643" "b7d967c53f4e3dfc1f847824ffa3f902de44d3a99b12ea110e0ec2fcec24501d" "27dd7c2cedf588b6a67a8b8914ad600b625712d5339cb48f7844169eb6ab5c8e" "4455435a66dba6e81d55a843c9c7e475a7a935271bf63a1dfe9f01ed2a4d7572" "fc524ddf651fe71096d0012b1c34d08e3f20b20fb1e1b972de4d990b2e793339" "9076ed00a3413143191cb9324d9426df38d83fb6dba595afbd43983db1015ef4" "c4d3cbd4f404508849e4e902ede83a4cb267f8dff527da3e42b8103ec8482008" "af033d47be9bd0d0ac6aab1ba7eec464c11f63580890a37c72372b993f8b325e" "7e362b29da8aa9447b51c2b354d8df439db33b3612ddd5baa34ad3de32206d83" "f72ccaa311763cb943de5f9f56a0d53b0009b772f4d05f47835aa08011797aa8" "4c9b1fd4f7b03a28850fa5775ad589f51f27f99414e14a965206ab543a309a3e" "617341f1be9e584692e4f01821716a0b6326baaec1749e15d88f6cc11c288ec6" "ed91d4e59412defda16b551eb705213773531f30eb95b69319ecd142fab118ca" default)))
+    ("93a0885d5f46d2aeac12bf6be1754faa7d5e28b27926b8aa812840fe7d0b7983" "6b289bab28a7e511f9c54496be647dc60f5bd8f9917c9495978762b99d8c96a0" "10461a3c8ca61c52dfbbdedd974319b7f7fd720b091996481c8fb1dded6c6116" "cd736a63aa586be066d5a1f0e51179239fe70e16a9f18991f6f5d99732cabb32" "fe666e5ac37c2dfcf80074e88b9252c71a22b6f5d2f566df9a7aa4f9bea55ef8" "6b2636879127bf6124ce541b1b2824800afc49c6ccd65439d6eb987dbf200c36" "43c808b039893c885bdeec885b4f7572141bd9392da7f0bd8d8346e02b2ec8da" "d2e9c7e31e574bf38f4b0fb927aaff20c1e5f92f72001102758005e53d77b8c9" "49ec957b508c7d64708b40b0273697a84d3fee4f15dd9fc4a9588016adee3dad" "58c6711a3b568437bab07a30385d34aacf64156cc5137ea20e799984f4227265" "ae6d87b0e931c6671559f217d2369711b42fe23912f5c0de2da8d7da8e25be4d" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "c48551a5fb7b9fc019bf3f61ebf14cf7c9cdca79bcb2a4219195371c02268f11" "72a81c54c97b9e5efcc3ea214382615649ebb539cb4f2fe3a46cd12af72c7607" "9b59e147dbbde5e638ea1cde5ec0a358d5f269d27bd2b893a0947c4a867e14c1" "5f27195e3f4b85ac50c1e2fac080f0dd6535440891c54fcfa62cdcefedf56b1b" "1ba61848d0d8c78e037867c26f118875705c20f5ad64949a8cee8c8059e5c50f" "5811d86b1d0907966fa2eb1d27a3c0e330c64f388740416f8e8c9079b81123e2" "2aa073a18b2ba860d24d2cd857bcce34d7107b6967099be646d9c95f53ef3643" "b7d967c53f4e3dfc1f847824ffa3f902de44d3a99b12ea110e0ec2fcec24501d" "27dd7c2cedf588b6a67a8b8914ad600b625712d5339cb48f7844169eb6ab5c8e" "4455435a66dba6e81d55a843c9c7e475a7a935271bf63a1dfe9f01ed2a4d7572" "fc524ddf651fe71096d0012b1c34d08e3f20b20fb1e1b972de4d990b2e793339" "9076ed00a3413143191cb9324d9426df38d83fb6dba595afbd43983db1015ef4" "c4d3cbd4f404508849e4e902ede83a4cb267f8dff527da3e42b8103ec8482008" "af033d47be9bd0d0ac6aab1ba7eec464c11f63580890a37c72372b993f8b325e" "7e362b29da8aa9447b51c2b354d8df439db33b3612ddd5baa34ad3de32206d83" "f72ccaa311763cb943de5f9f56a0d53b0009b772f4d05f47835aa08011797aa8" "4c9b1fd4f7b03a28850fa5775ad589f51f27f99414e14a965206ab543a309a3e" "617341f1be9e584692e4f01821716a0b6326baaec1749e15d88f6cc11c288ec6" "ed91d4e59412defda16b551eb705213773531f30eb95b69319ecd142fab118ca" default)))
  '(fci-rule-color "#f1c40f")
  '(hl-paren-background-colors (quote ("#2492db" "#95a5a6" nil)))
  '(hl-paren-colors (quote ("#ecf0f1" "#ecf0f1" "#c0392b")))
@@ -21,7 +22,7 @@
  '(org-export-backends (quote (ascii html icalendar latex md)))
  '(package-selected-packages
    (quote
-    (evil-mode centered-window google-this sx undo-tree company-mode move-text which-key openwith helm helm-mode-manager helm-make persp-projectile dashboard dired-filter workgroups2 all-the-icons ace-window dired-sidebar workgroups clang-format buffer-flip xterm-color smooth-scroll smooth-scrolling perspective sublime-themes frame-local projectile ov company-lsp lsp-ui cquery emacs-cquery org-ref expand-region ## ensime scala-mode eww-lnum kaolin-themes dracula-theme magit slime)))
+    (doom-themes python-mode flymd evil-mode centered-window google-this sx undo-tree company-mode move-text which-key openwith helm helm-mode-manager helm-make persp-projectile dashboard dired-filter workgroups2 all-the-icons ace-window dired-sidebar workgroups clang-format buffer-flip xterm-color smooth-scroll smooth-scrolling perspective sublime-themes frame-local projectile ov company-lsp lsp-ui cquery emacs-cquery org-ref expand-region ## ensime scala-mode eww-lnum kaolin-themes dracula-theme magit slime)))
  '(persp-mode t)
  '(powerline-color1 "#222232")
  '(powerline-color2 "#333343")
@@ -51,7 +52,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(fringe ((t (:background "#000")))))
 
 
 (require 'package)
@@ -222,7 +223,11 @@ There are two things you can do about this warning:
                ("\\section{%s}" . "\\section*{%s}")
                ("\\subsection{%s}" . "\\subsection*{%s}")
                ("\\subsubsection{%s}" . "\\subsubsection*{%s}")))
-
+(setq org-latex-listings 'minted
+      org-latex-packages-alist '(("" "minted"))
+      org-latex-pdf-process
+      '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 ;; TODO
 ;; (load "my-first-lisp-file")
 ;; (global-set-key [S-f10] 'exec-run)
