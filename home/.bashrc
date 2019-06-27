@@ -8,6 +8,7 @@
 DOTFILES=/home/$USER/dotfiles/home
 PATH=/home/$USER/my-linux-setup/scripts:$PATH
 PATH=/scripts:$PATH
+PATH=/home/$USER/scripts:$PATH
 export PATH
 
 source $DOTFILES/git-completion.bash

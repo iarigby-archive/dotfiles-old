@@ -11,7 +11,8 @@ gaps outer -4
 # smart_gaps on
 
 bindsym $mod+Shift+Return exec emacsclient -nc
-
+bindsym $mod+m exec shortcuts
+bindsym $mod+Shift+m exec shortcuts i3
 ### end custom, some other changed sections are tagged with #custom
 
 new_window pixel 1
