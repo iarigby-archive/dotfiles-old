@@ -1,5 +1,5 @@
 ;;; ~/.doom.d/config.el -*- lexical-binding: t; -*-
-
+;;; wheeeeee
 ;; Place your private configuration here
 
 (require 'ox-latex)
