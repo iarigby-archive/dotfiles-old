@@ -5,7 +5,7 @@
 [[ $- != *i* ]] && return
 
 
-DOTFILES=/home/$USER/dotfiles/home
+DOTFILES=/home/$USER
 PATH=/home/$USER/my-linux-setup/scripts:$PATH
 PATH=/scripts:$PATH
 PATH=/home/$USER/scripts:$PATH
