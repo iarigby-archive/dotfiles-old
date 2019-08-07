@@ -12,7 +12,9 @@ Plug 'junegunn/limelight.vim'
 Plug 'haya14busa/vim-keeppad'
 Plug 'jceb/vim-orgmode'
 Plug 'gmoe/vim-espresso'
+Plug 'mr-ubik/vim-hackerman-syntax'
 call plug#end()
+
 
 
 " this is for org mode
@@ -22,4 +24,4 @@ autocmd VimEnter * Goyo
 set nu
 set t_Co=256
 set background=dark
-colorscheme espresso
+colorscheme hackerman
