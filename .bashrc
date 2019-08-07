@@ -4,11 +4,12 @@
 
 [[ $- != *i* ]] && return
 
-
-DOTFILES=/home/$USER
-PATH=/home/$USER/my-linux-setup/scripts:$PATH
+# if chromebook then chronos/user
+HOMEDIR=~
+DOTFILES=$HOMEDIR
+PATH=$HOMEDIR/my-linux-setup/scripts:$PATH
 PATH=/scripts:$PATH
-PATH=/home/$USER/scripts:$PATH
+PATH=$HOMEDIR/scripts:$PATH
 export PATH
 
 source $DOTFILES/git-completion.bash
@@ -151,4 +152,5 @@ ex ()
 alias fucking='sudo'
 export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
 
-eval $(thefuck --alias)
+# TODO this might not work when it's installed, check on another machine
+[ -z "$(thefuck > /dev/null 2>&1)" ] ||  eval $(thefuck --alias)
