@@ -152,5 +152,5 @@ ex ()
 alias fucking='sudo'
 export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
 
-# TODO this might not work when it's installed, check on another machine
-[ -z "$(thefuck > /dev/null 2>&1)" ] ||  eval $(thefuck --alias)
+# https://stackoverflow.com/questions/592620/how-to-check-if-a-program-exists-from-a-bash-script
+[ -x "$(command -v thefuck > /dev/null 2>&1)" ] &&  eval $(thefuck --alias)
