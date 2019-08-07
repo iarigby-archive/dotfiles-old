@@ -16,3 +16,32 @@ There are two things you can do about this warning:
     ;; For important compatibility libraries like cl-lib
     (add-to-list 'package-archives (cons "gnu" (concat proto "://elpa.gnu.org/packages/")))))
 (package-initialize)
+
+(eval-when-compile
+  (require 'use-package))
+
+(add-to-list 'load-path "~/.emacs.d/evil")
+(require 'evil)
+(evil-mode 1)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("04589c18c2087cd6f12c01807eed0bdaa63983787025c209b89c779c61c3a4c4" default)))
+ '(package-selected-packages
+   (quote
+    (unicode-fonts org-evil which-key use-package smooth-scroll smartparens persp-projectile openwith multiple-cursors move-text magit lsp-ui google-this evil doom dired-sidebar dashboard cquery company-lsp clang-format cherry-blossom-theme buffer-move buffer-flip all-the-icons-dired ace-window))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+(use-package unicode-fonts)
+;; https://stackoverflow.com/questions/16270105/why-are-some-unicode-characters-invisible-in-emacs
+(unicode-fonts-setup)
+(load-theme cherry-blossom)
