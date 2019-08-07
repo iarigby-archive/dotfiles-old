@@ -154,3 +154,4 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 
 # https://stackoverflow.com/questions/592620/how-to-check-if-a-program-exists-from-a-bash-script
 [ -x "$(command -v thefuck > /dev/null 2>&1)" ] &&  eval $(thefuck --alias)
+exec zsh
