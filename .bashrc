@@ -5,14 +5,13 @@
 [[ $- != *i* ]] && return
 
 # if chromebook then chronos/user
-HOMEDIR=~
+HOMEDIR=$HOME
 DOTFILES=$HOMEDIR
 PATH=$HOMEDIR/my-linux-setup/scripts:$PATH
 PATH=/scripts:$PATH
 PATH=$HOMEDIR/scripts:$PATH
 export PATH
 
-source $DOTFILES/git-completion.bash
 
 HISTSIZE=10000
 HISTFILESIZE=10000

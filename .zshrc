@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/ia/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 source ~/.aliases
 PATH=/home/$USER/scripts:$PATH
 PATH=/home/$USER/my-linux-setup/scripts:$PATH
@@ -11,7 +11,7 @@ export PATH
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="kardan"
+ZSH_THEME="bira"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
