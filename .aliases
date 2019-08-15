@@ -1,3 +1,4 @@
+alias dropdown="tdrop -a -w 50% --height "50%" kitty"
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
