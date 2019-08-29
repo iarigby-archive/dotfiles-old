@@ -4,18 +4,8 @@
 
 [[ $- != *i* ]] && return
 
+source $HOME/.shrc
 # if chromebook then chronos/user
-HOMEDIR=$HOME
-DOTFILES=$HOMEDIR
-PATH=$HOMEDIR/my-linux-setup/scripts:$PATH
-PATH=/scripts:$PATH
-PATH=$HOMEDIR/scripts:$PATH
-export PATH
-
-
-HISTSIZE=10000
-HISTFILESIZE=10000
-export HISTCONTROL=ignoreboth:erasedups
 
 colors() {
 	local fgc bgc vals seq0
@@ -152,5 +142,4 @@ alias fucking='sudo'
 export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
 
 # https://stackoverflow.com/questions/592620/how-to-check-if-a-program-exists-from-a-bash-script
-[ -x "$(command -v thefuck > /dev/null 2>&1)" ] &&  eval $(thefuck --alias)
 exec zsh

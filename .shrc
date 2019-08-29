@@ -1,0 +1,15 @@
+
+
+### PATH
+PATH=/home/$USER/scripts:$PATH
+PATH=/home/$USER/my-linux-setup/scripts:$PATH
+export PATH
+
+### aliases
+source ~/.aliases
+[ -x "$(command -v thefuck > /dev/null 2>&1)" ] &&  eval $(thefuck --alias)
+
+### history settings
+export HISTSIZE=10000
+export HISTFILESIZE=10000
+export HISTCONTROL=ignoreboth:erasedups
