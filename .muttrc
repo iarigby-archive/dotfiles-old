@@ -14,3 +14,15 @@ bind index G imap-fetch-mail
 set editor = "vim"
 set charset = "utf-8"
 set record = ''
+
+set sort = "threads"
+set strict_threads = "yes"
+set sort_browser = "reverse-date"
+set sort_aux = "last-date-received"
+
+
+unset collapse_unread
+bind index - collapse-thread
+
+color index color214 default ~O
+
