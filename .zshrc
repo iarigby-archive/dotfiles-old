@@ -19,9 +19,9 @@ ZSH_THEME="kardan"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git tmux)
 
+ZSH_TMUX_AUTOSTART=true
 source $ZSH/oh-my-zsh.sh
 
-ZSH_TMUX_AUTOSTART=true
 # User configuration
 source $HOME/.shrc
 # export MANPATH="/usr/local/man:$MANPATH"
