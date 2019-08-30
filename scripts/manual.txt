@@ -1,0 +1,5 @@
+here are the tasks we need to do manually like savages
+
+- log in to firefox
+
+in firefox, google needs manual login since browserpass won't work there 
