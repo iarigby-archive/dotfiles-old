@@ -23,7 +23,7 @@ source $ZSH/oh-my-zsh.sh
 
 ZSH_TMUX_AUTOSTART=true
 # User configuration
-
+source $HOME/.shrc
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
