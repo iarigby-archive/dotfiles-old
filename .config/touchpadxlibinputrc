@@ -1,0 +1,4 @@
+[Elan Touchpad]
+naturalScroll=true
+pointerAcceleration=0.2
+tapToClick=true
