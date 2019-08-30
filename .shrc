@@ -1,4 +1,4 @@
-
+# test for yadm
 
 ### PATH
 PATH=/home/$USER/scripts:$PATH
