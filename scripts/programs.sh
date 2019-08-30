@@ -1,8 +1,14 @@
 essential_programs=(kitty tmux)
 
+convenience_programs=(rofi rofi-pass)
+
 security_programs=(pass browserpass browserpass-firefox browserpass-chromium)
+
 long_install=(emacs thefuck)
-programs=("${essential_programs[@]}" "${security_programs[@]}" "${long_install[@]}")
+programs=("${essential_programs[@]}" 
+	"${security_programs[@]}" 
+	"${convenience_programs[@]}"
+	"${long_install[@]}")
 for program in "${programs[@]}"
 do
 	yay -S --needed --noconfirm $program
