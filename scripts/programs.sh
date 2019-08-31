@@ -1,6 +1,6 @@
 essential_programs=(kitty tmux)
 
-convenience_programs=(rofi rofi-pass)
+convenience_programs=(rofi rofi-pass neofetch)
 
 security_programs=(pass browserpass browserpass-firefox browserpass-chromium)
 

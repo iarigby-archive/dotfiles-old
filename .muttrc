@@ -15,14 +15,17 @@ set editor = "vim"
 set charset = "utf-8"
 set record = ''
 
-set sort = "threads"
+set sort = "reverse-threads"
 set strict_threads = "yes"
-set sort_browser = "reverse-date"
+# set sort_browser = "reverse-date"
 set sort_aux = "last-date-received"
 
 
-unset collapse_unread
+set collapse_unread = no
+set uncollapse_new = yes
+set uncollapse_jump = yes
 bind index - collapse-thread
+folder-hook . push '<collapse-all>'
 
 color index color214 default ~O
 
