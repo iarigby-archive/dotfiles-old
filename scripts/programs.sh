@@ -1,6 +1,10 @@
-essential_programs=(kitty tmux)
+essential_programs=(kitty tmux firefox)
+# TODO add to main
+terminal_programs=(tdrop)
 
-convenience_programs=(rofi rofi-pass neofetch)
+convenience_programs=(fzf rofi rofi-pass neofetch tldr)
+
+alternative_programs=(bat fd ripgrep)
 
 security_programs=(pass browserpass browserpass-firefox browserpass-chromium)
 

@@ -1,0 +1,19 @@
+#!/bin/sh
+# you run this with symlinks already installed and your dead
+backup_dir=$HOME/Backups/Dropbox_symlink_pre
+mkdir -p $backup_dir
+sync() {
+# caution uses global $backup_dir
+    destination=$HOME/$(basename $1)
+    cp -r $destination $backup_dir
+    rm -r $destination
+    ln -s $1 $destination
+}
+
+syncfrom=$HOME/Dropbox/home
+for file in $syncfrom/*
+do
+    sync $file
+done
+
+sync $syncfrom/.zsh_history
