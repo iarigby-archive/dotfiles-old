@@ -3,7 +3,6 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -24,9 +23,34 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 source $HOME/.shrc
-# export MANPATH="/usr/local/man:$MANPATH"
+# export MANPATH="/usr/local/man:$MANPATH
+function fh() {
+   command=$(fc -ln 0|               # show history without line numbers
+     tac |               # reverse the order
+     awk '!x[$0]++'  |               # drop duplicates (https://unix.stackexchange.com/a/193331)
+     fzf -e +s \
+         --color=light \
+         --height=20 \
+         --inline-info \
+         --border \
+         --prompt="Search history "  # fuzzy find with exact match, no sorting and custom style
+   )
 
-# You may need to manually set your language environment
+   if [[ !  -z  $param  ]]; then
+     BUFFER=$BUFFER
+     zle redisplay     # redisplay the current command prompt line
+   else
+     # See http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html#Zle-Widgets
+     # for more details on this
+     BUFFER=$command   # replace the buffer of the command prompt with our command
+     zle redisplay     # redisplay the current command prompt line
+     zle accept-line   # accept the current line in buffer a.k.a "press enter"
+   fi
+ }
+zle -N fh
+bindkey '^R' fh
+
+# Yiou may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
