@@ -3,3 +3,7 @@
 	name = iarigby
 [diff]
 	ignoreSubmodules = dirty
+[pull]
+	rebase = true
+[core]
+	excludesfile = /home/ia/.gitignore_global
