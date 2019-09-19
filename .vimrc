@@ -6,7 +6,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/seoul256.vim'
-Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'haya14busa/vim-keeppad'
 Plug 'jceb/vim-orgmode'
@@ -31,7 +30,6 @@ set nu
 set t_Co=256
 " set background=dark
 " colorscheme hackerman
-colorscheme mandevilla
+" colorscheme mandevilla
 
 " https://www.reddit.com/r/vim/comments/4b8ie3/execute_goyo_plugin_when_opening_markdown_file/
-autocmd VimEnter * Goyo
