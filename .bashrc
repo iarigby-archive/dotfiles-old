@@ -4,7 +4,7 @@
 
 [[ $- != *i* ]] && return
 
-source $HOME/.shrc
+# source $HOME/.shrc
 # if chromebook then chronos/user
 
 colors() {

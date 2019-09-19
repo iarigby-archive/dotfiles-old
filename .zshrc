@@ -7,7 +7,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="kardan"
+# ZSH_THEME="kardan" # the one with >
+ZSH_THEME="avit"
 
 # OPTIONS was here
 
@@ -18,7 +19,7 @@ ZSH_THEME="kardan"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git tmux)
 
-ZSH_TMUX_AUTOSTART=true
+# ZSH_TMUX_AUTOSTART=true
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -129,3 +130,5 @@ bindkey '^R' fh
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
+
+eval $(thefuck --alias)
