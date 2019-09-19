@@ -13,7 +13,18 @@ source $HOME/.aliases
 export HISTSIZE=10000
 export HISTFILESIZE=10000
 export HISTCONTROL=ignoreboth:erasedups
-setopt appendhistory
+setopt APPEND_HISTORY 
 export HISTCONTROL=ignoredups
 
 export GPG_TTY=$(tty)
+
+function psgrep() {
+ ps aux | grep $1 | grep -v grep
+}
+
+function killgrep() {
+ kill -9 $(psgrep $1 | awk '{print $2}')
+ psgrep $1
+}
+
+export FZF_DEFAULT_COMMAND='fd -E .git -E node_modules'
