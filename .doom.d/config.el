@@ -38,6 +38,7 @@
 
 (setq openwith-associations '(("\\.pdf\\'" "foxitreader" (file))))
 
+(require 'material-theme)
 ;; begin doom themes
 (require 'doom-themes)
 
@@ -63,4 +64,3 @@
 
 ;; end doom themes
 ;;
-(require 'material-theme)
