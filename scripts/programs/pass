@@ -1,0 +1,6 @@
+#!/bin/bash
+
+pass init marvinzem@gmail.com
+pass git init
+pass git remote add origin git@github.com:iarigby/pass
+pass git pull --rebase origin master --allow-unrelated-histories
