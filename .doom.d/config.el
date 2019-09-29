@@ -64,3 +64,5 @@
 
 ;; end doom themes
 ;;
+;; (require 'spacemacs-light)
+;; (load-theme 'spacemacs-light)

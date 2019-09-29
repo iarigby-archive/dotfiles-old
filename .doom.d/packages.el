@@ -12,3 +12,4 @@
 (package! ox-gfm)
 (after! org (require 'ox-gfm nil t))
 (package! material-theme)
+(package! ox-pandoc)

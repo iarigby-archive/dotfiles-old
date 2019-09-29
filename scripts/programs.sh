@@ -3,7 +3,7 @@ essential_programs=(kitty tmux firefox)
 terminal_programs=(tdrop)
 
 convenience_programs=(fzf rofi rofi-pass neofetch tldr)
-
+dev_programs=(yarn nodejs vscode)#TODO add amin
 alternative_programs=(bat fd ripgrep)
 
 security_programs=(pass browserpass browserpass-firefox browserpass-chromium)
