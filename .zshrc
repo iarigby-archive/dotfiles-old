@@ -8,10 +8,12 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="kardan" # the one with >
-ZSH_THEME="avit"
-
+# ZSH_THEME="oxide" #not good with ligth backgrounds
+ZSH_THEME="spaceship" 
+# lambda was good as well
+# Bunnyruni
+#
 # OPTIONS was here
-
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
