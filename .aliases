@@ -35,7 +35,7 @@ function cpdate() {
 	date '+%Y-%m-%d %H:%M:%S' | xclip -sel clip
 }
 function backup() {
-	mv $1 ~/Backups
+	cp -r $1 ~/Backups
 }
 alias thesis="cd ~/dev/liblibfuzz/"
 alias datef="date '+%Y-%m-%d %H:%M:%S'"
