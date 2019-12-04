@@ -8,6 +8,8 @@ alternative_programs=(bat fd ripgrep)
 
 security_programs=(pass browserpass browserpass-firefox browserpass-chromium)
 
+# firefox - sweet theme
+
 long_install=(emacs thefuck)
 programs=("${essential_programs[@]}" 
 	"${security_programs[@]}" 
