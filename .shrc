@@ -3,6 +3,7 @@
 ### PATH
 PATH=/home/$USER/scripts:$PATH
 PATH=/home/$USER/my-linux-setup/scripts:$PATH
+PATH=$PATH:/home/$USER/.local/bin
 export PATH
 
 ### aliases
@@ -28,3 +29,5 @@ function killgrep() {
 }
 
 export FZF_DEFAULT_COMMAND='fd -E .git -E node_modules'
+server=116.203.187.241                    
+
