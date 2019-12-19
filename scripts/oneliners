@@ -1,0 +1,4 @@
+
+function d2pdf {
+ libreoffice --headless --convert-to-pdf $1
+}
