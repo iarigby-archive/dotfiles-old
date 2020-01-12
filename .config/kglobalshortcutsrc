@@ -1,7 +1,11 @@
 [ActivityManager]
 _k_friendly_name=Activity Manager
+switch-to-activity-13bee742-4656-4cf4-a9c9-2aeaee57c080=none,none,Switch to activity "school software"
+switch-to-activity-61bcab20-2fab-49f7-9202-969df5609789=none,none,Switch to activity "pall"
+switch-to-activity-7fb80eb3-edd8-494e-b77c-656e84492532=none,none,Switch to activity "paradigms"
 switch-to-activity-88baf561-2147-4688-9160-b6f65bae04ed=none,none,Switch to activity "thesis"
 switch-to-activity-b58ef675-3d13-4fc6-bfeb-cab9d5afe5b1=none,none,Switch to activity "Default"
+switch-to-activity-d81195a0-eaf9-46ec-bf6b-9de60f4db27b=none,none,Switch to activity "methodologies"
 switch-to-activity-ed0881a5-a42c-4eab-92fd-7421890076a3=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
@@ -27,7 +31,10 @@ display=Display\tMeta+P,Display\tMeta+P,Switch Display
 
 [khotkeys]
 _k_friendly_name=KDE Daemon
+{14ee1d9a-7fa9-4f92-9c80-6aa854fb82d3}=Ctrl+Shift+Del,none,New Action
 {2de1ad41-d649-477d-bda7-9de5aa381ed7}=none,none,Launch Konsole
+{6d2a8f08-31b0-48c1-9982-0491703484a3}=Ctrl+Shift+Return,none,emacs
+{703a210c-0a8d-4dc7-a2ae-303565ad3cf8}=Meta+M,none,menu
 {9563ed25-64e7-4ae9-9a96-dd7756723dd2}=Meta+Space,none,kitty
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=,none,Search
 
@@ -196,9 +203,9 @@ Window to Desktop 7=none,none,Window to Desktop 7
 Window to Desktop 8=none,none,Window to Desktop 8
 Window to Desktop 9=none,none,Window to Desktop 9
 Window to Next Desktop=none,none,Window to Next Desktop
-Window to Next Screen=none,none,Window to Next Screen
+Window to Next Screen=Ctrl+Alt+Left,none,Window to Next Screen
 Window to Previous Desktop=none,none,Window to Previous Desktop
-Window to Previous Screen=none,none,Window to Previous Screen
+Window to Previous Screen=Ctrl+Alt+Right,none,Window to Previous Screen
 Window to Screen 0=none,none,Window to Screen 0
 Window to Screen 1=none,none,Window to Screen 1
 Window to Screen 2=none,none,Window to Screen 2
@@ -222,7 +229,7 @@ activate entry 13=Meta+C,Meta+C,Activate Entry 13
 activate entry 14=Meta+V,Meta+V,Activate Entry 14
 activate entry 15=Meta+B,Meta+B,Activate Entry 15
 activate entry 16=Meta+N,Meta+N,Activate Entry 16
-activate entry 17=Meta+M,Meta+M,Activate Entry 17
+activate entry 17=,Meta+M,Activate Entry 17
 activate entry 18=Meta+\\,,Meta+\\,,Activate Entry 18
 activate entry 19=Meta+.,Meta+.,Activate Entry 19
 activate entry 2=,Meta+2,Activate Entry 2
@@ -269,7 +276,7 @@ _k_friendly_name=Media Controller
 mediavolumedown=none,none,Media volume down
 mediavolumeup=none,none,Media volume up
 nextmedia=Media Next,Media Next,Media playback next
-playpausemedia=Media Play,Media Play,Play/Pause media playback
+playpausemedia=,Media Play,Play/Pause media playback
 previousmedia=Media Previous,Media Previous,Media playback previous
 stopmedia=Media Stop,Media Stop,Stop media playback
 
@@ -280,10 +287,10 @@ _launch=Meta+E,Meta+E,Dolphin
 [org.kde.spectacle.desktop]
 ActiveWindowScreenShot=,Meta+Print,Capture Active Window
 CurrentMonitorScreenShot=none,none,Capture Current Monitor
-FullScreenScreenShot=,Shift+Print,Capture Entire Desktop
-RectangularRegionScreenShot=Print,Meta+Shift+Print,Capture Rectangular Region
+FullScreenScreenShot=Ctrl+Shift+Print,Shift+Print,Capture Entire Desktop
+RectangularRegionScreenShot=Shift+Print,Meta+Shift+Print,Capture Rectangular Region
 _k_friendly_name=Spectacle
-_launch=none,Print,Spectacle
+_launch=Print,Print,Launch Spectacle
 
 [org_kde_powerdevil]
 Decrease Keyboard Brightness=Keyboard Brightness Down,Keyboard Brightness Down,Decrease Keyboard Brightness
@@ -312,6 +319,9 @@ activate task manager entry 9=Meta+9,Meta+9,Activate Task Manager Entry 9
 activate widget 2=Alt+F1,none,Activate Application Launcher Widget
 activate widget 57=none,none,Activate Media Player + Widget
 activate widget 63=,none,Activate Application Launcher Widget
+activate widget 74=Meta+Shift+N,none,Activate Notifications Widget
+activate widget 91=Media Play,none,Activate Media Player + Widget
+activate widget 93=none,none,Activate UMenu Widget
 clear-history=none,none,Clear Clipboard History
 clipboard_action=Ctrl+Alt+X,Ctrl+Alt+X,Enable Clipboard Actions
 cycleNextAction=none,none,Next History Item
