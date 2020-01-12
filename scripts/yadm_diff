@@ -1,0 +1,1 @@
+yadm status --porcelain | awk '{print $2}' | fzf --preview-window=right:75% --preview "yadm diff --color {}" 

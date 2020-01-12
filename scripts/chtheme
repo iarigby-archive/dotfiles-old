@@ -1,0 +1,60 @@
+#!/bin/bash
+
+file=~/.current_theme
+current_theme=$(head -n 1 $file) # 0 light 1 dark
+
+#program=(darktheme lighttheme)
+kitty=(light dark)
+# kde=(org.kde.breeze.desktop org.kde.starcraft)
+kde=(Amethyst-Light Amethyst)
+emacs=(spacemacs-light doom-challenger-deep)
+wallpapers=(casette.jpg palm-dark.jpg) 
+[ $current_theme = 0 ] && theme=1 || theme=0
+echo $theme > $file
+
+etheme=${emacs[$theme]}
+emacsclient -e "(load-theme '$etheme t)"
+emacsclient -e "(doom/reload-theme)"
+
+ktheme=${kitty[$theme]}
+ktheme_c=${kitty[$current_theme]}
+kitty @ set-colors -a ~/.config/kitty/theme-$ktheme.conf
+sed -i "s/$ktheme_c/$ktheme/g" ~/.config/kitty/current-theme.conf
+
+# madloba
+lookandfeeltool -a ${kde[$theme]} &> /dev/null
+
+# https://wiki.archlinux.org/index.php/Keyboard_backlight
+setKeyboardLight () {
+    dbus-send --system --type=method_call  --dest="org.freedesktop.UPower" "/org/freedesktop/UPower/KbdBacklight" "org.freedesktop.UPower.KbdBacklight.SetBrightness" int32:$1 
+}
+
+setKeyboardLight $theme 
+# two ways to make this better
+# restructure progs to get value from .current_theme
+# create function for each prog and call them, so they can be called separately
+
+wallpaper=${wallpapers[$theme]}
+if [ $wallpaper == palm-dark.jpg ]; then
+dbus-send --session --dest=org.kde.plasmashell --type=method_call /PlasmaShell org.kde.PlasmaShell.evaluateScript 'string:
+var Desktops = desktops();
+for (i=0;i<Desktops.length;i++) {
+        d = Desktops[i];
+        d.wallpaperPlugin = "org.kde.image";
+        d.currentConfigGroup = Array("Wallpaper",
+                                    "org.kde.image",
+                                    "General");
+        d.writeConfig("Image", "file:////home/ia/Pictures/wallpapers/palm-dark.jpg");
+}'
+else
+	dbus-send --session --dest=org.kde.plasmashell --type=method_call /PlasmaShell org.kde.PlasmaShell.evaluateScript 'string:
+var Desktops = desktops();
+for (i=0;i<Desktops.length;i++) {
+        d = Desktops[i];
+        d.wallpaperPlugin = "org.kde.image";
+        d.currentConfigGroup = Array("Wallpaper",
+                                    "org.kde.image",
+                                    "General");
+        d.writeConfig("Image", "file:////home/ia/Pictures/wallpapers/casette.jpg");
+}'
+fi

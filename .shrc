@@ -3,6 +3,7 @@
 ### PATH
 PATH=/home/$USER/scripts:$PATH
 PATH=/home/$USER/my-linux-setup/scripts:$PATH
+PATH=$PATH:/home/$USER/.local/bin
 export PATH
 
 ### aliases
@@ -10,8 +11,23 @@ source $HOME/.aliases
 [ -x "$(command -v thefuck > /dev/null 2>&1)" ] &&  eval $(thefuck --alias)
 
 ### history settings
-export HISTSIZE=10000
-export HISTFILESIZE=10000
+export HISTSIZE=1000000
+export HISTFILESIZE=1000000
 export HISTCONTROL=ignoreboth:erasedups
+setopt APPEND_HISTORY 
+export HISTCONTROL=ignoredups
 
 export GPG_TTY=$(tty)
+
+function psgrep() {
+ ps aux | grep $1 | grep -v grep
+}
+
+function killgrep() {
+ kill -9 $(psgrep $1 | awk '{print $2}')
+ psgrep $1
+}
+
+export FZF_DEFAULT_COMMAND='fd -E .git -E node_modules'
+server=116.203.187.241                    
+

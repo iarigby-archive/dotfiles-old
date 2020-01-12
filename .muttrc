@@ -1,0 +1,31 @@
+set realname = "Ia Mgvdliashvil"
+set from = "marvinzem@gmail.com"
+set use_from = yes
+set envelope_from = yes
+
+set smtp_url = "smtps://marvinzem@gmail.com@smtpp.gmail.com:465/"
+source "gpg -d ~/.mutt/passwords.gpg |"
+set imap_user = "marvinzem@gmail.com"
+set folder  = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set ssl_force_tls = yes
+
+bind index G imap-fetch-mail
+set editor = "vim"
+set charset = "utf-8"
+set record = ''
+
+set sort = "reverse-threads"
+set strict_threads = "yes"
+# set sort_browser = "reverse-date"
+set sort_aux = "last-date-received"
+
+
+set collapse_unread = no
+set uncollapse_new = yes
+set uncollapse_jump = yes
+bind index - collapse-thread
+folder-hook . push '<collapse-all>'
+
+color index color214 default ~O
+

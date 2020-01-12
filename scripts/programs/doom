@@ -1,0 +1,4 @@
+#!/bin/bash
+git clone https://github.com/hlissner/doom-emacs ~/.emacs.d
+~/.emacs.d/bin/doom install
+#  https://github.com/hlissner/doom-emacs/tree/d1a299b9f5a21db18f3a885f91dde86480eb0cf0 

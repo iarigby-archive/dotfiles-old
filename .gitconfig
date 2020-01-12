@@ -3,3 +3,12 @@
 	name = iarigby
 [diff]
 	ignoreSubmodules = dirty
+[pull]
+	rebase = true
+[core]
+	excludesfile = /home/ia/.gitignore_global
+
+# what is this?? where did it come from??
+[filesystem "N/A|13.0.1|/dev/sda1"]
+	timestampResolution = 8000 nanoseconds
+	minRacyThreshold = 6276 microseconds

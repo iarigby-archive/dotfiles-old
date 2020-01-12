@@ -1,0 +1,3 @@
+
+# emacsclient systemctl --user enable --now emacs 
+systemctl --user enable --now emacs 
