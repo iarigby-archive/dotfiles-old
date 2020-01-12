@@ -38,5 +38,5 @@ function backup() {
 	cp -r $1 ~/Backups
 }
 alias thesis="cd ~/dev/liblibfuzz/"
-alias datef="date '+%Y-%m-%d %H:%M:%S'"
+alias datefs="date '+%Y-%m-%d %H:%M:%S'"
 alias datef="date '+%Y-%m-%d-%H-%M'"
