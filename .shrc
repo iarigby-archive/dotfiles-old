@@ -4,6 +4,7 @@
 PATH=/home/$USER/scripts:$PATH
 PATH=/home/$USER/my-linux-setup/scripts:$PATH
 PATH=$PATH:/home/$USER/.local/bin
+PATH=$PATH:$(ruby -e 'puts Gem.user_dir')/bin
 export PATH
 
 ### aliases
