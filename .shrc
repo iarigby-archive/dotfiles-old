@@ -4,12 +4,15 @@
 PATH=/home/$USER/scripts:$PATH
 PATH=/home/$USER/my-linux-setup/scripts:$PATH
 PATH=$PATH:/home/$USER/.local/bin
+# PATH=$PATH:$(ruby -e 'puts Gem.user_dir')/bin
+PATH=$PATH:/home/$USER/.gem/ruby/2.7.0
+# PATH=$PATH:$(yarn global bin)
+PATH=$PATH:/home/$USER/.yarn/bin
 export PATH
 
 ### aliases
 source $HOME/.aliases
 [ -x "$(command -v thefuck > /dev/null 2>&1)" ] &&  eval $(thefuck --alias)
-
 ### history settings
 export HISTSIZE=1000000
 export HISTFILESIZE=1000000
@@ -17,6 +20,10 @@ export HISTCONTROL=ignoreboth:erasedups
 setopt APPEND_HISTORY 
 export HISTCONTROL=ignoredups
 
+### environment vairables
+#
+#wavebox 
+export GTK_USE_PORTAL=1
 export GPG_TTY=$(tty)
 
 function psgrep() {
@@ -28,6 +35,12 @@ function killgrep() {
  psgrep $1
 }
 
+function sum() {
+ awk '{sum += $1;} END {print sum;}'
+}
+function memusg() {
+ ps -o pid,user,%mem,command ax | grep $1 | awk '{print $3}' | sum
+}
 export FZF_DEFAULT_COMMAND='fd -E .git -E node_modules'
 server=116.203.187.241                    
 
