@@ -17,19 +17,21 @@ Plug 'tpope/vim-speeddating'
 " THEMES
 Plug 'gmoe/vim-espresso'
 Plug 'mr-ubik/vim-hackerman-syntax'
-Plug 'evanram/mandevilla'
 Plug 'flrnprz/candid.vim'
-
+Plug 'AlessandroYorba/Breve'
+Plug 'flrnprz/candid.vim'
 call plug#end()
 
 
 " this is for org mode
 filetype plugin indent on
-
 set nu
 set t_Co=256
 " set background=dark
-" colorscheme hackerman
+" colorscheme 
 " colorscheme mandevilla
+" colorscheme candid
 
+hi Normal ctermbg=none
+highlight NonText ctermbg=none
 " https://www.reddit.com/r/vim/comments/4b8ie3/execute_goyo_plugin_when_opening_markdown_file/
