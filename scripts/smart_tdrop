@@ -1,25 +1,16 @@
 #!/bin/bash
-# sleep 0.1
 current_windows=$(xdotool search --class konsole | xargs -I sw xdotool getwindowname sw | sort -u)
-echo $current_windows
-if [ -z "$current_windows" ]
-then
+
+if [ -z "$current_windows" ]; then
 	konsole &
 	exit
 fi
 	
 active_window=$(xdotool getwindowfocus getwindowname | awk 'NF>1{print $NF}')
+
 [[ "$active_window" = "Konsole" ]] && xdotool key super+Down && exit
-for curr_win in ${current_windows[@]}
-do
-#	echo $curr_win
-	if [ "$curr_win" = "Konsole" ]; then	
-		# will not work at all with multiple windows
-		window_location=$(wmctrl -l | grep Konsole | awk '{print $1}' | head -1)
-		echo $window_location
-		wmctrl -i -r $window_location -t -1	
-		xdotool search --class konsole | xargs -I sw xdotool windowactivate sw
-		exit
-	fi
-done 
-# tdrop -w 60% -h 40% konsole
+
+# will not work at all with multiple windows
+window_location=$(wmctrl -l | grep Konsole | awk '{print $1}' | head -1)
+wmctrl -i -r $window_location -t -1	
+xdotool search --class konsole | xargs -I sw xdotool windowactivate sw
