@@ -3,23 +3,44 @@
 file=~/.current_theme
 current_theme=$(head -n 1 $file) # 0 light 1 dark
 
-#program=(darktheme lighttheme)
-kitty=(light dark)
+# program=(darktheme lighttheme)
+# kitty=(light dark)
+
 # kde=(org.kde.breeze.desktop org.kde.starcraft)
-kde=(Amethyst-Light Amethyst)
+# kde=(Amethyst-Light Amethyst)
+kde=(org.kde.breeze.desktop org.kde.breezedark.desktop)
+
+# kde=(org.kde.breeze.desktop org.kde.starcraft)
 emacs=(spacemacs-light doom-challenger-deep)
-wallpapers=(casette.jpg palm-dark.jpg) 
+
+# not working
+# wallpapers=(casette.jpg palm-dark.jpg) 
+
 [ $current_theme = 0 ] && theme=1 || theme=0
 echo $theme > $file
 
 etheme=${emacs[$theme]}
-emacsclient -e "(load-theme '$etheme t)"
-emacsclient -e "(doom/reload-theme)"
+# emacsclient -e "(load-theme '$etheme t)"
+# emacsclient -e "(doom/reload-theme)"
 
-ktheme=${kitty[$theme]}
-ktheme_c=${kitty[$current_theme]}
-kitty @ set-colors -a ~/.config/kitty/theme-$ktheme.conf
-sed -i "s/$ktheme_c/$ktheme/g" ~/.config/kitty/current-theme.conf
+vscode=("Harmonic16 Light Theme" "Absolute Black")
+vscodetheme=${vscode[$theme]}
+vs_prev=${vscode[$current_theme]}
+sed -i "s/$vs_prev/$vscodetheme/g" ~/.config/Code\ -\ OSS/User/settings.json
+
+# if [ "$1" == "test" ]
+# then
+#         exit
+# fi
+
+
+# ktheme=${kitty[$theme]}
+# ktheme_c=${kitty[$current_theme]}
+# kitty @ set-colors -a ~/.config/kitty/theme-$ktheme.conf
+# sed -i "s/$ktheme_c/$ktheme/g" ~/.config/kitty/current-theme.conf
+
+xdotool search --class firefox | xargs -I {} xdotool windowactivate {}
+xdotool key alt+O
 
 # madloba
 lookandfeeltool -a ${kde[$theme]} &> /dev/null
@@ -34,8 +55,11 @@ setKeyboardLight $theme
 # restructure progs to get value from .current_theme
 # create function for each prog and call them, so they can be called separately
 
-wallpaper=${wallpapers[$theme]}
-if [ $wallpaper == palm-dark.jpg ]; then
+# wallpaper=${wallpapers[$theme]}
+#if [ $wallpaper == palm-dark.jpg ]
+# TODO change user name on reinstall 
+if [ $theme == 1 ]
+then
 dbus-send --session --dest=org.kde.plasmashell --type=method_call /PlasmaShell org.kde.PlasmaShell.evaluateScript 'string:
 var Desktops = desktops();
 for (i=0;i<Desktops.length;i++) {
@@ -44,7 +68,7 @@ for (i=0;i<Desktops.length;i++) {
         d.currentConfigGroup = Array("Wallpaper",
                                     "org.kde.image",
                                     "General");
-        d.writeConfig("Image", "file:////home/ia/Pictures/wallpapers/palm-dark.jpg");
+        d.writeConfig("Image", "file:////home/panic/Pictures/wallpapers/dark.jpg");
 }'
 else
 	dbus-send --session --dest=org.kde.plasmashell --type=method_call /PlasmaShell org.kde.PlasmaShell.evaluateScript 'string:
@@ -55,6 +79,6 @@ for (i=0;i<Desktops.length;i++) {
         d.currentConfigGroup = Array("Wallpaper",
                                     "org.kde.image",
                                     "General");
-        d.writeConfig("Image", "file:////home/ia/Pictures/wallpapers/casette.jpg");
+        d.writeConfig("Image", "file:////home/panic/Pictures/wallpapers/light.jpg");
 }'
 fi
