@@ -20,7 +20,6 @@ ZSH_THEME="spaceship"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git tmux)
-
 # ZSH_TMUX_AUTOSTART=true
 source $ZSH/oh-my-zsh.sh
 
@@ -133,4 +132,3 @@ bindkey '^R' fh
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-eval $(thefuck --alias)
